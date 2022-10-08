@@ -1,13 +1,237 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@media screen and (max-width: 991px) {}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (max-width: 550px) {
+  * {
+    margin: 0;
+  }
+
+  .redirect {display: none;}
+
+  .open {
+    display: flex;
+    background: #000000bb;
+    backdrop-filter: blur(.5rem);
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    top: 50%;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .land {
+    width: 90%;
+    height: 100vh;
+  }
+
+  .land .can {
+    margin: 0 1rem;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .land .can p {margin-top: -8rem;}
+  .land .can h2 {margin-bottom: 1rem 0 1rem;}
+  .land .can h3 {font-size: 2rem; margin: 1rem 0;}
+  .land .can h1 {font-size: 5rem; margin: -2rem -0.2rem -9rem;}
+
+  .menu {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 4rem;
+    right: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .menu .spain {
+    background: var(--foregroundColor);
+    width: 40px;
+    height: 4px;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 3;
+    transition: 1s;
+  }
+
+  .menu .spain:nth-child(1) {transform: translateY(-15px);}
+  .menu .spain:nth-child(2) {transform: translateY(15px);}
+
+  .menu .spain.close:nth-child(3) {display: none;}
+
+  .menu .spain.close:nth-child(1) {
+    transform: translateY(0) rotate(-135deg);
+    background: red;
+    transition-delay: .1s;
+  }
+
+  .menu .spain.close:nth-child(2) {
+    background: red;
+    transform: translateY(0) rotate(135deg);
+    transition-delay: .2s;
+  }
+
+  /* about */
+  .about {
+    width: 90%;
+    height: 90vh;
+    margin: 7rem auto;
+  }
+
+  .about p {
+    margin: 0 auto 1rem;
+    width: 100%;
+  }
+
+  /* skills */
+  .skills {
+    width: 90%;
+    height: 90vh;
+    margin: 7rem auto;
+  }
+
+  .skills .first {
+    grid-template-rows: repeat(4, 7rem);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 10px;
+    overflow: hidden;
+  }
+
+  .skills .first .grid-child {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 15rem;
+  }
+
+  .skills .first .grid-child img {
+    width: 6rem;
+    height: 4rem;
+  }
+
+
+  /* services */
+  .services {
+    width: 90%;
+    height: 90vh;
+    margin: 7rem auto;
+  }
+
+  .services .card-holder {
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
+  }
+
+  .services .card-holder .card {
+    width: 100%;
+    margin: .6rem auto;
+  }
+
+  /* portfolio */
+  .portfolio {
+    width: 90%;
+    height: 90vh;
+    margin: 7rem auto;
+  }
+  
+  .portfolio .container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+  }
+  
+  .portfolio .container span {
+    /* position: absolute; */
+    background: var(--foregroundColor);
+    padding: 1rem 1rem 1rem 0;
+    cursor: pointer;
+    color: var(--backgroundColor);
+    top: 50%;
+    left: 0;
+  }
+  
+  .portfolio .container .right {
+    padding: 1rem 0 1rem 1rem;
+    top: 50%;
+    z-index: 1;
+  }
+  
+  .portfolio .container .pic {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    /* background: red; */
+  }
+  
+  /* contact */
+  .contact {
+    width: 90%;
+    height: 90vh;
+    margin: 7rem auto;
+  }
+  
+  .contact .contain {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .contact .contain .first {
+    width: 100%;
+    height: 40%;
+  }
+
+  .contact .first p {
+    margin: 1rem 0; 
+  }
+
+
+  .contact .contain .first .enter {
+    margin: 0 0 1rem 0;
+  }
+
+  .contact .contain .first .enter input {
+    padding: 5px 0;
+    height: 100%;
+  }
+
+  .contact .contain .first .enter label {
+    top: 10px;
+    padding: 5px 0;
+  }
+
+  .contact .first .enter input:focus ~ label,
+  .contact .first .enter input:valid ~ label {
+      top: -15px;
+      font-size: 12px;
+      color: var(--styleColor);
+  }
+
+  .contact .contain .second {
+    width: 100%;
+    height: 50%;
+    position: relative;
+  }
+
+  .contact .second textarea {
+    width: 100%;
+  }
+
+  .contact .second button {
+    margin-top: .3rem;
+  }
+
 }

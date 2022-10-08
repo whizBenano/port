@@ -1,38 +1,315 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    font-family: 'noto sans';
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --backgroundColor: #000;
+    --foregroundColor: #ddd;
+    --styleColor: #db7c46;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.light-theme {
+    --backgroundColor: #ddd;
+    --foregroundColor: #000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+    background: var(--backgroundColor);
+    overflow: hidden;
+    color: #fff;
+}
+
+/*nav*/
+.redirect {
+    position: absolute;
+    top: 50%;
+    right: 10rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 7rem;
+    height: 25rem;
+}
+
+.redirect a {
+    color: var(--foregroundColor);
+    opacity: .2;
+    text-decoration: none;
+    padding: 1rem 0;
+    margin: 2px;
+    transition: .5s;
+}
+
+.redirect a:hover {
+  font-size: 1.6rem;
+  opacity: 1;
+}
+
+.redirect a.active {
+    font-size: 1.6rem;
+    color: var(--styleColor);
+    opacity: 1;
+}
+
+.switch {
+    width: 30px;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+/*home*/
+.land {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.land .can {
+    margin: 0 10rem;
+}
+
+.land h3, h2 {color: var(--styleColor);}
+.land h2 {margin: 0 0 -5rem; font-size: 4rem;}
+.land h3 {margin: -5rem 0 0; font-size: 3rem;}
+.land h1 {font-size: 7rem; font-weight: 100; margin-left: -10px;}
+.land p {font-size: 1.2rem; margin: 2rem 0 0;}
+.land h1, p {color: var(--foregroundColor);}
+
+/* about */
+.about {
+    width: 60%;
+    height: 60vh;
+    margin: 10rem 0 10rem 10rem;
+    text-align: justify;
+}
+
+/* skills */
+.skills {
+    width: 60%;
+    height: 60vh;
+    margin: 10rem 0 10rem 10rem;
+}
+
+.skills .first {
+    display: grid;
+    grid-template-rows: repeat(2, 7rem);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 10px;
+    margin: 2rem 0;
+}
+
+.skills .first .grid-child {
+    background: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 15rem;
+}
+
+.skills .first .grid-child p {color: #fff;}
+
+.skills .first .grid-child img {
+    width: 8rem;
+    height: 5rem;
+}
+
+.skills a {
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    background: var(--styleColor);
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+}    
+
+/* services */
+.services {
+    width: 60%;
+    height: 60vh;
+    /* background: yellow; */
+    margin: 10rem 0 10rem 10rem;
+    text-align: justify;
+}
+
+.services .header3 {
+    color: var(--foregroundColor); 
+    text-align: center;
+    transition: 3s ease;
+}
+
+.services .card-holder {
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+
+.services .card-holder .card {
+    background: rebeccapurple;
+    margin: 1rem;
+    width: 30%;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px #000;
+    transition: .5s ease;
+}
+
+.services .card-holder .card:hover {scale: 1.05;}
+
+/* portfolio */
+.portfolio {
+    width: 60%;
+    height: 60vh;
+    margin: 10rem 0 10rem 10rem;
+    text-align: justify;
+}
+
+.portfolio .container {
+  width: 100%;
+  height: 80%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.portfolio .container span {
+  padding: 1rem 1rem 1rem 0;
+  cursor: pointer;
+  color: var(--foregroundColor);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.portfolio .container .right {
+  padding: 1rem 0 1rem 1rem;
+}
+
+.portfolio .container .pic {
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio .container .pic .image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.portfolio .container .pic .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000000a0;
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: .5s ease;
+}
+
+.portfolio .container .pic:hover .overlay {
+    height: 30%;
+}
+
+.portfolio .container .pic .overlay p {color: #fff;}
+
+.portfolio .container .pic .overlay a {
+    color: #fff;
+    background: var(--styleColor);
+    padding: .4rem 1rem;
+    text-decoration: none;
+}
+
+/* contact */
+.contact {
+    width: 60%;
+    height: 60vh;
+    margin: 10rem 0 10rem 10rem;
+    text-align: justify;
+}
+
+.contact .contain {
+    display: flex;
+    height: 80%;
+}
+
+.contact .first {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem 0 0;
+}
+
+.contact .first p {
+    margin-bottom: 3rem; 
+    font-style: italic; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.contact .first .enter { position: relative;}
+
+.contact .first .enter input {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--foregroundColor);
+    color: var(--foregroundColor);
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.contact .first .enter label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--foregroundColor);
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.contact .first .enter input:focus ~ label,
+.contact .first .enter input:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+    color: var(--styleColor);
+}
+
+.contact .second {
+    width: 50%;
+    text-align: right;
+}
+
+.contact .second textarea {
+    width: 90%;
+    resize: none;
+    height: 80%;
+    outline: none;
+    padding: 1rem;
+}
+
+.contact .second button {
+    background: var(--styleColor);
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
 }
