@@ -19,9 +19,9 @@ const About = () => {
                     About
                 </motion.h2>
                 <p>
-                    I am a product and experience designer and my motto is 
-                    "Keep it elegantly simple" because I so much love simple 
-                    and meaningful designs. I am over 10 years experienced 
+                    I am a frontend developer, a product and experience designer
+                    and my motto is "Keep it elegantly simple" because I so much 
+                    love simple and meaningful designs. I am over 10 years experienced 
                     with designs and have a solid background in graphics design.
                     I use tools like XD or Figma for design and prototyping 
                     before doing the actual coding.

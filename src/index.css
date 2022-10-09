@@ -136,6 +136,8 @@
     margin: .6rem auto;
   }
 
+  .services .card-holder .card img {width: 9rem;}
+
   /* portfolio */
   .portfolio {
     width: 90%;
