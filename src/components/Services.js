@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import frontend from '../mages/one.png'
+import frontend from '../mages/frontend.png'
 import webapp from '../mages/webapp.png'
 import mobile from '../mages/mobileapp.png'
 
@@ -28,7 +28,7 @@ const Services = () => (
       </div>
 
       <div className='card'>
-        <img src={webapp} atl='' />
+        <img src={webapp} alt='' />
         <h3>Frontend Dev</h3>
       </div>
 

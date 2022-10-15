@@ -35,12 +35,12 @@ const About = () => {
                     I have a great sense of aesthetics which affects my colour choices 
                     and overall design in order to achieve user friendliness.
                 </p>
-                <p>
+                {/* <p>
                     My abundant energy fuels me in the pursuit of many interests, 
                     hobbies, areas of study and artistic endeavors. I’m a fast 
                     learner, able to pick up new skills and juggle different 
                     projects and roles with relative ease.
-                </p>
+                </p> */}
                 {/* <p>
                     Hello, I am Oluwakemi Adeleke. . I perfectly balance user and business needs to create 
                     delightful products. Creating user engaging and immersive 
