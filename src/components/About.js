@@ -36,17 +36,25 @@ const About = () => {
                     and overall design in order to achieve user friendliness.
                 </p>
                 {/* <p>
-                    My abundant energy fuels me in the pursuit of many interests, 
-                    hobbies, areas of study and artistic endeavors. I’m a fast 
-                    learner, able to pick up new skills and juggle different 
-                    projects and roles with relative ease.
-                </p> */}
-                {/* <p>
-                    Hello, I am Oluwakemi Adeleke. . I perfectly balance user and business needs to create 
-                    delightful products. Creating user engaging and immersive 
-                    applications has always been a longstanding ambition of mine, I 
-                    focus on designing complex and functional web and mobile products 
-                    for B2C and B2B organizations. Finding ways to communicate to 
+
+
+                    Establish a mission statement.
+                    Outline your company story.
+                    Reveal how you've evolved.
+                    State your 'aha!' moment.
+                    Explain who you serve.
+                    Explain what you're offering them.
+                    Cite examples of who you've served.
+                    Describe your values.
+
+
+                    I perfectly balance user and business needs
+                    
+                    to achieve 
+                    delightful products.  I 
+                    focus on designing functional web and mobile products 
+                    
+                    for both small and large scale. Finding ways to communicate to 
                     users in a visually and cohesively inviting way is important to 
                     me. I am adept at handling multiple design projects in a fast 
                     paced environment. Excellent at time management, organization, 
